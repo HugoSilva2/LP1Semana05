@@ -6,26 +6,35 @@ namespace Chronos
 {
     class Program
     {
-        //define both cronos
-        Stopwatch crono1 = new Stopwatch();
-        Stopwatch crono2 = new Stopwatch();
+        static void Main(string[] args)
+        {
+            //define both cronos
+            Stopwatch crono1 = new Stopwatch();
+            Stopwatch crono2 = new Stopwatch();
 
-        //Start crono1
-        
-        
-        //Stop crono1 after 0.6 seconds
-        
+            //Start crono1
+            crono1.Start();
+            
+            //Stop crono1 after 0.6 seconds
+            Thread.Sleep(600);
 
-        //Start crono2
-        
-        //Stop crono2 after 0.2 seconds
+            //Start crono2
+            crono2.Start();
 
-        //Stop Both cronos
+            //Stop crono2 after 0.2 seconds
+            Thread.Sleep(200);
 
+            //Stop Both cronos
+            crono1.Stop();
+            crono2.Stop();
 
-        //Get the both times in seconds
+            //Get the both times in seconds
+            float time1 = crono1.ElapsedMilliseconds/1000f;
+            float time2 = crono2.ElapsedMilliseconds/1000f;
 
-        //Print
+            //Print
+            Console.WriteLine($"Crono1: {time1}; Crono2: {time2}.");
+        }
     }
 }
 
