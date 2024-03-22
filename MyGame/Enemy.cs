@@ -12,6 +12,10 @@ namespace MyGame
             return name;
         }
 
+        public string SetName()
+        {
+
+        }
         public void TakeDamage(float damage)
         {
             shield -= damage;
@@ -24,6 +28,7 @@ namespace MyGame
             }
         }
 
+        public
         private string name;
         private float health;
         private float shield;
